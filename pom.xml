@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.jdm.http.webserver</groupId>
+	<artifactId>HttpWebServer-Proof-of-concept</artifactId>
+	<version>0.0.1</version>
+	<packaging>jar</packaging>
+	<name>HttpWebServer-Proof-of-concept</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<junit-version>4.12</junit-version>
+	</properties>
+
+	<!-- List the core developers -->
+	<developers>
+		<developer>
+			<id>jduran</id>
+			<name>Jorge Durán</name>
+			<roles>
+				<role>architect</role>
+			</roles>
+			<timezone>0</timezone>
+		</developer>
+	</developers>
+
+	<dependencies>
+
+		<!-- Junit Lib for Testing. -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit-version}</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>spring-milestone</id>
+			<url>http://repo.springsource.org/libs-milestone</url>
+		</repository>
+	</repositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.jdm.http.webserver.server.HttpWebServer</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

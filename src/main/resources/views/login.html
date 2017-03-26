@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>The Simple Web site</title>
+</head>
+<body>
+<header>
+    <h2>Welcome {{ USERNAME }} to</h2>
+
+    <h1>The Simple Web site</h1>
+</header>
+<p class="error">{{ ERROR }}</p>
+<form action="/login" method="post" enctype="application/x-www-form-urlencoded">
+    <div class="form-group">
+        <label for="username_input">Username: </label>
+        <input type="text" id="username_input" name="username"/>
+    </div>
+    <div class="form-group">
+        <label for="password_input">Password: </label>
+        <input type="password" id="password_input" name="password"/>
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-default" value="Log in!"/>
+    </div>
+</form>
+</body>
+</html>
